@@ -1,9 +1,9 @@
 import React, {useEffect, useMemo} from 'react';
-import { EMPLOYEES } from 'modules/api/endpoints';
-import useFetch from 'hooks/useFetch';
-import ProfileGrid from 'components/common/ProfileGrid';
+import { EMPLOYEES } from '../../modules/api/endpoints';
+import useFetch from '../../hooks/useFetch';
+import ProfileGrid from '../common/ProfileGrid';
 import { useSelector } from 'react-redux';
-import { selectAppState } from 'modules/app/selectors';
+import { selectAppState } from '../../modules/app/selectors';
 
 export default function Employees() {
     const {response, performFetch} = useFetch(EMPLOYEES);

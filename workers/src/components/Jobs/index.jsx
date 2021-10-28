@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import { JOBS } from '../../modules/api/endpoints';
 import Navigation from '../common/Navigation';
-import useFetch from './hooks/useFetch';
+import useFetch from '../../hooks/useFetch';
 
 export default function Jobs() {
     const {response, performFetch} = useFetch(JOBS);

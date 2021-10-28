@@ -1,4 +1,4 @@
-import { APP_ACTIONS } from 'modules/app/actions';
+import { APP_ACTIONS } from '../../app/actions';
 
 function getInitialState() {
     return {
