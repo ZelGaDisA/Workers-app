@@ -1,30 +1,15 @@
-import React, { useEffect } from "react";
-import api from "../../modules/api/api";
-import { JOBS } from '../../modules/api/endpoints'
-import { useSelector, useDispatch } from "react-redux";
-import { apiActions } from "../../modules/api/actions";
+import React, {useEffect} from 'react';
+import { JOBS } from '../../modules/api/endpoints';
+import Navigation from '../common/Navigation';
+import useFetch from './hooks/useFetch';
 
 export default function Jobs() {
-    const state = useSelector(state => state.api[JOBS])
-    const dispatch = useDispatch();
+    const {response, performFetch} = useFetch(JOBS);
+    const {loading, data} = response;
 
-    useEffect(async () => {
-        try {
-            dispatch(apiActions.fetch(JOBS));
+    useEffect(() => {
+        performFetch();
+    }, [performFetch]);
 
-            const data = await api.fetch(JOBS);
-
-            dispatch(apiActions.fetchSuccess(JOBS, data));
-        } catch(e) {
-            dispatch(apiActions.fetchFailure(JOBS, e))
-        }
-    }, []);
-
-    console.log(state);
-
-    return (
-        <div>
-            Jobs
-        </div>
-    )
+    return <Navigation loading={loading} services={data} title={'react + redux + redux-saga app'} />;
 }
