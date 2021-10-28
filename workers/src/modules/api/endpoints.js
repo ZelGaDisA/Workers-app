@@ -1,6 +1,5 @@
 export const JOBS = 'jobs';
-export const EPLOYEES = 'employees';
-
+export const EMPLOYEES = 'employees';
 
 const ENDPOINTS = {
     [JOBS]: {
@@ -12,6 +11,5 @@ const ENDPOINTS = {
         method: 'GET'
     }
 };
-
 
 export default ENDPOINTS;

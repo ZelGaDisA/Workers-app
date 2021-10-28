@@ -1,6 +1,6 @@
 import ENDPOINTS from "./endpoints";
 
-const BASE_URL = 'https://5f7998dbe402340016f9321f.mokapi.io/api/v1';
+const BASE_URL = 'https://5f7998dbe402340016f9321f.mockapi.io/providers';
 
 class Api {
     constructor(baseUrl, endpoints) {
