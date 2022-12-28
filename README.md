@@ -4,7 +4,9 @@
 Technologies:
 
 React 14
-
+CSS
+HTML
+JS
 
 ##This app have:
 
